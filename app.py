@@ -5,7 +5,12 @@ import plotly.graph_objects as go
 import re
 import joblib
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="Prediction of Story Drift and Peak Floor Acceleration",
+    page_icon="icon/avatars 500x500.jpg",          # có thể dùng emoji hoặc đường dẫn ảnh
+    layout="wide",           # "centered" hoặc "wide"
+    initial_sidebar_state="expanded",
+)
 
 # ================================
 # Parameters of the steel building
@@ -497,4 +502,5 @@ if uploaded_at2 is not None:
         st.dataframe(df_acc, hide_index=True)
 else:
     st.info("No file selected yet.")
+
 
